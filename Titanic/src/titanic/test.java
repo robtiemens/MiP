@@ -8,11 +8,6 @@ package titanic;
  *
  * @author Vincent
  */
-public class Classifier {
+public class test {
     
-    
-    public void pleasecrashniet()
-    {
-        int hiepoih;
-    }
 }
