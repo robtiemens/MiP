@@ -13,6 +13,8 @@ public class Classifier {
             
             void test2()
             {
+            	int hoi = 0;
+            	
                 
             }
 }
