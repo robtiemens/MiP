@@ -1,0 +1,31 @@
+function perfor = kFoldValidate(func,data,labs,k)
+[r,c] = size(data);
+
+splits = ones(1,k) *floor(r/k);
+remainder = rem(r,k);
+splits(1:remainder) = splits(1:remainder)+1;
+
+indices = [0 cumsum(splits)];
+randoms = randperm(r);
+dataRandom = data(randoms,:)';
+labsRandom = labs(randoms);
+
+
+for i = 1: k  
+    train = dataRandom([1:indices(i) indices(i+1):end],:);
+    test = dataRandom(splits(i)+1:splits(i+1),:);
+        if iscell(func)
+            predicted = zeros(1,max(labs));
+            for j = 1: length(func)
+                predicted(func{j}(train,test)) = predicted(func{j}(train,test,trainLabs)); 
+            end
+           [~,bepaald] = max(predicted');
+           testBepaald(i) = bepaald;
+        end
+    testBepaald = func(train,test);
+    performance(i) = perf(testBepaald,labs([1:indices(i) indices(i+1):end]));
+end
+
+perfor = mean(splits.*performance)/r;
+
+    

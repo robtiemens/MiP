@@ -9,10 +9,7 @@ package titanic;
  * @author Vincent
  */
 public class Classifier {
+    trolololol
     
-    
-    public void pleasecrashniet()
-    {
-        int hiepoih;
-    }
+    lalalalalalal
 }
