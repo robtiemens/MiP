@@ -11,6 +11,11 @@ package titanic;
 public class Classifier {
     
             
+    // lable information
+    // inpute data
+    // outpute result
+    // output confidence?
+    
             void test2()
             {
             	int hoi = 1;

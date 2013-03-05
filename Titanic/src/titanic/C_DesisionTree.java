@@ -8,9 +8,6 @@ package titanic;
  *
  * @author Vincent
  */
-public class Mathlab {
-   
-    
-    
+public class C_DesisionTree {
     
 }
